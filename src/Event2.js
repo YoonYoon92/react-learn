@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 
 const EventPractice = () =>
 {
-   const { name, setName } = useState('');
-   const { message, setMessage } = useState('');
+   const [name, setName] = useState('');
+   const [message, setMessage] = useState('');
 
    const onNameChange = e => setName(e.target.value);
    const onMessageChange = e => setMessage(e.target.value);
