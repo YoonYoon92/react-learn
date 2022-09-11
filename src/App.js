@@ -1,8 +1,9 @@
-import Say from './Say';
+import EventPractice from './Event2';
+
 
 const App = () =>
 {
-  return <Say />;
+  return <EventPractice />;
 };
 
 
