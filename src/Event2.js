@@ -2,41 +2,53 @@ import React, { useState } from 'react';
 
 const EventPractice = () =>
 {
-   const [name, setName] = useState('');
-   const [message, setMessage] = useState('');
 
-   const onNameChange = e => setName(e.target.value);
-   const onMessageChange = e => setMessage(e.target.value);
+   const [form, setForm] = useState({
+      username: '',
+      message: ''
+   });
+   const { username, message } = form;
+   const onChange = e =>
+   {
+      const nextForm =
+      {
+         ...form,
+         [e.target.name]: e.target.value
+      };
+      setForm(nextForm);
+   };
 
    const onClick = () =>
    {
-      alert(name + ' : ' + message);
-      setName('');
-      setMessage('');
+      alert(username + ' : ' + message);
+      setForm({
+         username: '',
+         message: ''
+      });
    };
-   const onKeyPress = (e) =>
+   const onKeyPress = e =>
    {
       if (e.key === 'Enter')
       {
          onClick();
       }
-   }
+   };
    return (
       <div>
          <h1>input함수</h1>
          <input
             type="text"
-            name="name"
+            name="username"
             placeholder="이름입력란"
-            value={name}
-            onChange={onNameChange}
+            value={username}
+            onChange={onChange}
          />
          <input
             type="text"
             name="message"
             placeholder="메세지입력란"
             value={message}
-            onChange={onMessageChange}
+            onChange={onChange}
             onKeyPress={onKeyPress}
          />
          <button
