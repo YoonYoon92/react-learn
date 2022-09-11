@@ -1,9 +1,10 @@
-import EventPractice from './Event2';
+import React, { Component } from 'react';
+import ValidationSample from './ref/VaildationSample';
 
 
 const App = () =>
 {
-  return <EventPractice />;
+  return <ValidationSample />;
 };
 
 
