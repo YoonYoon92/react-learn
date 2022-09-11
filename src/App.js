@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import ValidationSample from './ref/VaildationSample';
+import ScrollBox from './ref/ScrollBox';
 
 
 const App = () =>
 {
-  return <ValidationSample />;
+  return <ScrollBox />;
 };
 
 
